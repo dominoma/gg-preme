@@ -1,0 +1,266 @@
+/*
+
+Wenn du das Stylesheet verwendest, will ich ins Imperssum !!! XD
+
+LG Dominik
+
+copyright (c) Dominik Sander
+
+Ich verklag euch den Arsch :p
+
+*/
+/*------------------------------------------------------------------------------
+						Style f�r Textfelder/Selectboxen
+--------------------------------------------------------------------------------*/
+input[type="text"], input[type="number"], input[type="password"], select, .inputborder, .checklabel, .colorradio, .colorbigradio, .colorpopup{
+  display: block;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border: 0 none;
+  border: solid 2px #0B75AF;
+  border-radius: 2px 2px 2px 2px;
+  border-color: #0B75AF;
+  padding: 10px;
+  color:#fff;
+  -webkit-transition: border 0.3s, opacity 0.3s;
+  -moz-transition: border 0.3s, opacity 0.3s;
+  -o-transition: border 0.3s, opacity 0.3s;
+  transition: border 0.3s, opacity 0.3s;
+  background-color:transparent;
+}
+input[type="text"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, select:disabled, .inputborder:disabled, .checklabel:disabled, .colorradio:disabled, .colorbigradio:disabled, .colorpopup:disabled{
+	opacity:0.3;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+select {
+  
+  background-image:url(http://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-128.png);
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  padding-right: 25px;
+  
+}
+select option{
+	color:#000;
+	background:#fff;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, select:focus {
+  outline: none;
+  
+  
+}
+
+.checklabel, .colorradio, .colorbigradio{
+	font-size:18px;padding:0px;padding-left:2px;text-align:center;width:25;height:25;
+}
+.colorradio, .colorbigradio{
+	opacity:0.3;
+}
+.colorbigradio{
+	width:50px;
+	height:50px;
+	font-size:32px;
+	display: inline-block;
+	border: 0;
+}
+input[type=checkbox]:checked ~ .checklabel:before {
+	content:'✔'
+}
+
+input[type=radio]:checked ~ .colorradio, input[type=radio]:checked ~ .colorbigradio {
+	
+	opacity:1;
+	border: solid 2.5px #0B75AF;
+	//box-shadow: 0 0px 8px 0 rgba(255, 255, 255, 0.7), 0 0px 20px 0 rgba(95, 95, 95, 0.5);
+	//content:'✔';
+}
+
+.colorpopup{
+	visibility:hidden;
+	opacity: 0;
+    transition: opacity .3s, width .3s, height .3s;
+    width:100px;
+    height:100px;
+    
+    position: relative;
+    left:-27px;
+    top:-27px;
+   	
+   	box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.7), 0 0px 20px 0 rgba(0, 0, 0, 0.5);
+   	
+   	z-index:0;
+   	border:0;
+	
+}
+
+.colorpopup img{
+	background-size:contain;
+	width:100%;
+	height:100%;
+}
+
+input[type=radio]:checked ~ .colorbigradio:hover .colorpopup{
+	visibility:visible;
+	opacity: 1;
+	z-index:50;
+	
+	
+}
+
+/*------------------------------------------------------------------------------
+						Style f�r Tabellen
+						Benutzung:
+							Ohne Padding:
+							<table class="tablestyle">
+							Mit Padding:
+							<table class="tablestyle tablepadding">
+--------------------------------------------------------------------------------*/
+
+table.tablestyle {font-family: "Open Sans", sans-serif;padding: 0; margin: 0; border-collapse: collapse; color: #333; background: #F3F5F7;}
+
+	table.tablestyle a {color: #3A4856; text-decoration: none; border-bottom: 1px solid #C6C8CB;}  
+	
+	table.tablestyle a:visited {color: #777;}
+	
+	table.tablestyle a:hover {color: #000;}  
+	
+	table.tablestyle caption {text-align: left; text-transform: uppercase;  padding-bottom: 10px;}
+	
+	table.tablestyle thead th {background: #222222; padding: 15px 10px; color: #fff; text-align: left; font-weight: normal; font-family: "pt sans", sans-serif;}
+	
+	table.tablestyle tbody, table thead {border-left: 1px solid #EAECEE; border-right: 1px solid #EAECEE;}
+	
+	table.tablestyle tbody {border-bottom: 1px solid #EAECEE;}
+	                      
+	table.tablestyle tbody td, table tbody th {padding: 0px; background: url("td_back.gif") repeat-x; text-align: left; font-family: "pt sans", sans-serif;}
+	
+	table.tablestyle tbody tr {background: #d3d3d3/*#f9d1d1*/ ;}
+	
+	table.tablestyle tbody tr.odd {background: #bdbdbd/*#fbe0e0*/;}
+	
+	table.tablestyle tfoot td, table tfoot th, table tfoot tr {text-align: left; text-transform: uppercase; background: #fff; padding: 10px;}
+	
+	table.tablepadding tbody td, table tbody th {padding: 10px; overflow: hidden; background: url("td_back.gif") repeat-x; text-align: left; font-family: "pt sans", sans-serif;}
+	table.tablepadding tbody  tr:hover {color: #0B75AF ;  font-weight:bold; padding-right:8px}
+	table.tablepadding tbody td:hover {}
+/*------------------------------------------------------------------------------
+						Style für Buttons/Links
+						Benutzung:
+							<a class="ff_btn btn_black">
+						oder
+							<input type="submit" class="ff_btn btn_black">
+--------------------------------------------------------------------------------*/
+
+a {
+  text-decoration: none;
+}
+.ff_btn {
+  border: 0 none;
+  border: solid 2px #0B75AF;
+  border-radius: 2px 2px 2px 2px;
+  border-color: #0B75AF;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding: 7px 10px;
+  text-transform: none;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  text-align: center;
+}
+.ff_btn:focus{
+	outline: none;
+}
+
+.btn_black{background:transparent}
+
+.btn_large {
+  font-size: 17px;
+  padding: 10px 30px;
+  line-height: 33px;
+}
+.btn_medium {
+  font-size: 18px;
+  padding: 10px 30px;
+  line-height: 30px;
+}
+.ff_btn:hover:enabled {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background:rgba(11,117,175,0.3);
+  
+}
+.ff_btn[disabled] {
+ 	border: solid 2px rgba(11,117,175,0.3);
+ 	color: rgba(255,255,255,0.3);
+}
+
+/*------------------------------------------------------------------------------
+						Style f�r Checkboxen
+							Benutzung:
+								<input type='checkbox' class='css-checkbox' id='check0'><label for='check0' class='css-label'></label>
+							ACHTUNG!
+								Checkbox.png MUSS sich im selben Ordner wie die AllStyles.css befinden!
+--------------------------------------------------------------------------------*/
+
+input[type=checkbox].css-checkbox {
+	position:absolute; 
+	z-index:-1000; 
+	left:-1000px; 
+	overflow: hidden; 
+	clip: rect(0 0 0 0); 
+	height:1px; 
+	width:1px; 
+	margin:-1px; 
+	padding:0; 
+	border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:30px;
+	height:25px; 
+	display:inline-block;
+	line-height:25px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:25px;
+	vertical-align:middle;
+	cursor:pointer;
+
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -25px;
+}
+label.css-label {
+	background-image:url(Checkbox.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
